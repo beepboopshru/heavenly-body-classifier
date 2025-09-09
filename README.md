@@ -1,56 +1,63 @@
-Celestial Body Classifier
-A Python project that uses a Convolutional Neural Network (CNN) to classify telescope images of galaxies and stars. This project was developed as a hands-on learning exercise for an undergraduate-level introduction to machine learning and computer vision.
+🌌 Celestial Body Classifier
 
-The final trained model achieved 85.42% accuracy on the test dataset.
+A Python project that uses a Convolutional Neural Network (CNN) to classify telescope images of galaxies and stars.This project was developed as a hands-on learning exercise for an undergraduate-level introduction to machine learning and computer vision.
 
-Project Overview
-The project follows a standard machine learning workflow from start to finish:
+✨ The final trained model achieved 85.42% accuracy on the test dataset.
 
-Data Acquisition & Exploration: Downloads and analyzes an image dataset from Kaggle.
+📖 Project Overview
 
-Data Preprocessing: Resizes, normalizes, and splits the data into training, validation, and test sets using TensorFlow's data pipelines.
+This project follows a standard machine learning workflow from start to finish:
 
-Model Building: Defines a sequential CNN architecture using tensorflow.keras.
+Data Acquisition & ExplorationDownloads and analyzes an image dataset from Kaggle.
 
-Model Training: Trains the CNN on the prepared dataset and saves the learned weights to a .keras file.
+Data PreprocessingResizes, normalizes, and splits the data into training, validation, and test sets using TensorFlow’s data pipelines.
 
-Evaluation & Prediction: Evaluates the model's accuracy on unseen test data and provides a script to classify new, single images.
+Model BuildingDefines a sequential CNN architecture using tensorflow.keras.
 
-Setup and Installation
+Model TrainingTrains the CNN on the prepared dataset and saves the learned weights to a .keras file.
+
+Evaluation & PredictionEvaluates the model on unseen test data and provides a script to classify new single images.
+
+⚙️ Setup and Installation
+
 Follow these steps to get the project running on your local machine.
 
 1. Clone the Repository
 
-git clone [https://github.com/beepboopshru/heavenly-body-classifier.git](https://github.com/beepboopshru/heavenly-body-classifier.git)
+git clone https://github.com/beepboopshru/heavenly-body-classifier.git
 cd heavenly-body-classifier
 
 2. Create and Activate a Virtual Environment
+
 It is highly recommended to use a virtual environment to manage project dependencies.
 
-# Create the environment
+Create the environment:
+
 python -m venv .venv
 
-# Activate on Windows
+Activate on Windows:
+
 .venv\Scripts\activate
 
-# Activate on macOS/Linux
+Activate on macOS/Linux:
+
 source .venv/bin/activate
 
 3. Install Dependencies
-Install all the necessary Python libraries.
 
 pip install tensorflow matplotlib pillow
 
 4. Download the Data
-The image data is not included in this repository.
 
-Download the dataset from Kaggle: Galaxy, Star, and Planet Classification.
+The dataset is not included in this repository.
+
+Download the dataset from Kaggle: Galaxy, Star, and Planet Classification
 
 Unzip the downloaded file.
 
-Place the image folders (galaxy, star) inside a parent folder named Cutout Files in the root of the project directory.
+Place the image folders (galaxy, star) inside a parent folder named Cutout Files in the project root.
 
-The final directory structure should look like this:
+Final structure:
 
 heavenly-body-classifier/
 ├── Cutout Files/
@@ -64,46 +71,56 @@ heavenly-body-classifier/
 ├── predict_image.py
 └── README.md
 
-How to Run
+🚀 How to Run
+
 1. Train the Model
-Run the training script from your terminal. This will preprocess the data, build and train the model, and save the result as celestial_classifier.keras.
+
+This will preprocess the data, build and train the model, and save the result as celestial_classifier.keras.
 
 python train_model.py
 
 2. Make Predictions
+
 Once the model is trained, you can use the prediction script.
 
-Important: Open the predict_image.py file and edit the image_to_predict variable to point to the image you want to classify.
+⚠️ Open the predict_image.py file and edit the image_to_predict variable to point to the image you want to classify.
+
+Run:
 
 python predict_image.py
 
-The script will first output the model's overall accuracy on the test set and then print the prediction for your chosen image.
+The script will:
 
-Future Improvements
-This project serves as a great baseline. Here are several ways it could be extended and improved:
+Output the model’s overall accuracy on the test set.
 
-Improve Model Accuracy: The current 85% accuracy is a good start, but can be improved.
+Print the prediction for your chosen image.
 
-Tune Hyperparameters: Experiment with training for more EPOCHS (e.g., change from 15 to 25 or 30).
+🔮 Future Improvements
 
-Enhance Architecture: Add more Conv2D and MaxPooling2D layers to the model in train_model.py to allow it to learn more complex features.
+This project serves as a baseline. Here are ways it could be extended and improved:
 
-Data Augmentation: Implement data augmentation (e.g., random flips, rotations) to create more training examples from the existing data, which can help the model generalize better.
+Improve Model Accuracy: 85% is a good start, but can be improved.
 
-Add More Classes:
+Tune Hyperparameters: Experiment with more epochs (e.g., 25–30).
 
-Find another dataset on Kaggle or other astronomy archives for different celestial bodies (e.g., Nebulae, Quasars, planetary images).
+Enhance Architecture: Add more Conv2D and MaxPooling2D layers.
 
-Modify the model to handle multi-class classification (e.g., change the final Dense layer to have num_classes units with a softmax activation and switch the loss function to SparseCategoricalCrossentropy).
+Data Augmentation: Apply flips, rotations, and transformations to increase variety.
 
-Handle the Data Imbalance:
+Add More Classes: Extend to nebulae, quasars, planetary images, etc.
 
-The current dataset has significantly more star images than galaxy images. This can bias the model.
+Handle Data Imbalance: Use class_weight in model.fit to balance galaxy vs. star samples.
 
-Research and implement techniques like using the class_weight parameter during model training (model.fit) in TensorFlow to instruct the model to pay more attention to the under-represented 'galaxy' class.
+Build a Simple UI: Use Tkinter, PyQt, Streamlit, or Flask for an interactive image upload and prediction interface.
 
-Build a Simple UI:
+📜 License
 
-Create a more user-friendly interface instead of requiring a code change to predict an image.
+This project is licensed under the MIT License – see the LICENSE file for details.
 
-Use a Python GUI library like Tkinter (built-in), PyQt, or a simple web framework like Streamlit or Flask to build an application where a user can upload an image and see the prediction result in real-time.
+🌠 Acknowledgments
+
+TensorFlow
+
+Kaggle Dataset: Galaxy, Star, and Planet Classification
+
+Inspiration from astronomy and astrophysics research
