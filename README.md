@@ -1,6 +1,3 @@
-Got it ✅ Here’s a complete **GitHub README.md** file — cleanly structured, with code/text blocks and ready for copy-paste:
-
-````markdown
 # 🌌 Celestial Body Classifier
 
 A Python project that uses a **Convolutional Neural Network (CNN)** to classify telescope images of **galaxies** and **stars**.  
@@ -133,3 +130,4 @@ This project serves as a baseline. Potential improvements include:
 This project is open-source and available under the [MIT License](LICENSE).
 
 ---
+
